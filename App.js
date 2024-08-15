@@ -5,7 +5,12 @@ import { StyleSheet, Text, View } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello world</Text>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <View
+          style={{ width: 100, height: 100, backgroundColor: "red" }}
+        ></View>
+        ;
+      </View>
       <StatusBar style="auto" />
     </View>
   );
