@@ -1,28 +1,17 @@
-import React, { useState } from "react";
-import { View, Text, TextInput } from "react-native";
+import React from "react";
+import { View, Text } from "react-native";
 
-const App = () => {
-  const [name, setName] = useState("");
-
-  return (
-    <View
-      style={{
-        flex: 1,
-        alignContent: "center",
-        justifyContent: "center",
-        padding: 16,
-      }}
-    >
-      <Text style={{ marginVertical: 16 }}>
-        {name ? `Hi ${name}!` : "What is your name?"}
-      </Text>
-      <TextInput
-        style={{ padding: 8, backgroundColor: "#f5f5f5" }}
-        onChangeText={(text) => setName(text)}
-        secureTextEntry={true}
-      />
-    </View>
-  );
-};
+const App = () => (
+  <View style={{ flex: 1, justifyContent: "center" }}>
+    <Box color="red" />
+    <Box color="green" />
+    <Box color="blue" />
+  </View>
+);
 
 export default App;
+
+export const Box = (props) => (
+  // Move a box `View` component here
+  <View style={{ width: 100, height: 100, backgroundColor: props.color }} />
+);
